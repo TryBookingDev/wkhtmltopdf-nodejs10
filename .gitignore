@@ -3,4 +3,5 @@ deploy/*
 deployPackage.zip
 yarn-error.log
 yarn.lock
+.idea/
 

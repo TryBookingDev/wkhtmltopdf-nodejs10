@@ -7,7 +7,8 @@
   "author": "CristhianF7",
   "license": "MIT",
   "dependencies": {
-    "wkhtmltopdf": "^0.3.4"
+    "wkhtmltopdf": "^0.3.4",
+    "memorystream": "^0.3.1"
   },
   "scripts": {
     "build": "./scripts/deploy.sh"
