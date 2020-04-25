@@ -39,7 +39,7 @@ const createPdf = event => new Promise((resolve, reject) => {
 
 exports.handler = async (event) => {
     
-    const pdfString = await createPdf;
+    const pdfString = await createPdf(event);
     const response = {
         statusCode: 200,
         body: pdfString,
