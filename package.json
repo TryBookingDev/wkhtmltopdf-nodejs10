@@ -11,6 +11,7 @@
     "memorystream": "^0.3.1"
   },
   "scripts": {
-    "build": "./scripts/deploy.sh"
+    "build": "./scripts/deploy.sh",
+    "deploy": "aws lambda update-function-code --function-name htmtopdf --zip-file fileb://./deployPackage.zip"
   }
 }
