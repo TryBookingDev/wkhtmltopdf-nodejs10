@@ -17,11 +17,9 @@ process.env['PATH'] = process.env['PATH'] + ':' + process.env['LAMBDA_TASK_ROOT'
 // };
 
 
-const createPdf = new Promise((resolve, reject) => {
-    const html = '<h1>Test</h1>'
-    var event = { html_utf8:html }
+const createPdf = event => new Promise((resolve, reject) => {
     var memStream = new MemoryStream();
-    var html_utf8 = event.html_utf8;
+    var html_utf8 = Buffer.from(event.html_base64, 'base64').toString('utf8');
     console.log('html_utf8', html_utf8);
     event.options = event.options || {};
     event.options.debug = true;
