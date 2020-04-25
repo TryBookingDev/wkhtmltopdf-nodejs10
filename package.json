@@ -7,7 +7,8 @@
   "author": "CristhianF7",
   "license": "MIT",
   "dependencies": {
-    "wkhtmltopdf": "^0.3.4",
+    "is-stream": "^1.0.1",
+    "slang": ">=0.2",
     "memorystream": "^0.3.1"
   },
   "scripts": {
