@@ -2,7 +2,7 @@
 rm -rf deploy
 mkdir deploy
 cp -R wktools src index.js package.json deploy
-cp dependencies/**.* deploy
+cp -r dependencies deploy
 cd deploy
 npm install --production
 
