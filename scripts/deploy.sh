@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 rm -rf deploy
 mkdir deploy
+mkdir deploy/fonts
 cp wktools/bin/wkhtmltopdf deploy
 cp -R src index.js package.json deploy
-cp -r dependencies deploy
+cp dependencies/* deploy
+cp dependencies/fonts/* deploy/fonts
 cd deploy
 npm install --production
 
