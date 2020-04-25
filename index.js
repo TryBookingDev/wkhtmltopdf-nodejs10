@@ -1,5 +1,5 @@
 var wkhtmltopdf = require('./src/helpers/wkhtmltopdf');
-//var MemoryStream = require('memorystream');
+var MemoryStream = require('memorystream');
 
 process.env['PATH'] = process.env['PATH'] + ':' + process.env['LAMBDA_TASK_ROOT'];
 
