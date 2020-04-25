@@ -13,6 +13,6 @@
   },
   "scripts": {
     "build": "./scripts/deploy.sh",
-    "deploy": "rm deployPackage.zip && aws lambda update-function-code --function-name htmtopdf --zip-file fileb://./deployPackage.zip"
+    "deploy": "aws lambda update-function-code --function-name htmtopdf --zip-file fileb://./deployPackage.zip"
   }
 }
