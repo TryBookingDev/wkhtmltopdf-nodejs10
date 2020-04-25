@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "./scripts/deploy.sh",
-    "clean": "rm deployPackage.zip",
+    "clean": "rm deployPackage.zip && rm -r deploy",
     "deploy": "aws lambda update-function-code --function-name htmtopdf --zip-file fileb://./deployPackage.zip"
   }
 }
