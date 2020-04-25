@@ -19,6 +19,7 @@ function wkhtmltopdf(input, options, callback) {
     options = {};
   }
 
+    console.log('wkhtmltopdf input', input);
   console.log('wkhtmltopdf options', options);
   
   var output = options.output;
