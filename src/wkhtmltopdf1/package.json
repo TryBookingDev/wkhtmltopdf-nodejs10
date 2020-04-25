@@ -1,26 +1,27 @@
 {
-  "_from": "wkhtmltopdf@^0.3.4",
+  "_from": "wkhtmltopdf",
   "_id": "wkhtmltopdf@0.3.4",
   "_inBundle": false,
   "_integrity": "sha1-4ttUKn3CJIAyvxNnVLXN188oFfA=",
   "_location": "/wkhtmltopdf",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
+    "type": "tag",
     "registry": true,
-    "raw": "wkhtmltopdf@^0.3.4",
+    "raw": "wkhtmltopdf",
     "name": "wkhtmltopdf",
     "escapedName": "wkhtmltopdf",
-    "rawSpec": "^0.3.4",
+    "rawSpec": "",
     "saveSpec": null,
-    "fetchSpec": "^0.3.4"
+    "fetchSpec": "latest"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/wkhtmltopdf/-/wkhtmltopdf-0.3.4.tgz",
   "_shasum": "e2db542a7dc2248032bf136754b5cdd7cf2815f0",
-  "_spec": "wkhtmltopdf@^0.3.4",
+  "_spec": "wkhtmltopdf",
   "_where": "C:\\projects\\wkhtmltopdf-nodejs10",
   "author": {
     "name": "Devon Govett",

@@ -19,6 +19,8 @@ function wkhtmltopdf(input, options, callback) {
     options = {};
   }
 
+  console.log('wkhtmltopdf options', options);
+  
   var output = options.output;
   delete options.output;
 
@@ -184,6 +186,8 @@ function wkhtmltopdf(input, options, callback) {
     });
   }
 
+    console.log('wkhtmltopdf line 189');
+  
   // write input to stdin if it isn't a url
   if (!isUrl) {
     if (isStream(input)) {
@@ -193,6 +197,8 @@ function wkhtmltopdf(input, options, callback) {
     }
   }
 
+    console.log('wkhtmltopdf line 200 exiting');
+  
   // return stdout stream so we can pipe
   return stream;
 }
