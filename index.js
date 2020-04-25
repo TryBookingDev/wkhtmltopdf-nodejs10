@@ -17,6 +17,7 @@ process.env['PATH'] = process.env['PATH'] + ':' + process.env['LAMBDA_TASK_ROOT'
 // };
 
 
+const createPdf = new Promise((resolve, reject) => {
     const html = '<h1>Test</h1>'
     var event = { html_utf8:html }
     var memStream = new MemoryStream();
@@ -24,12 +25,29 @@ process.env['PATH'] = process.env['PATH'] + ':' + process.env['LAMBDA_TASK_ROOT'
     console.log('html_utf8', html_utf8);
     event.options = event.options || {};
     event.options.debug = true;
-    wkhtmltopdf(html_utf8, event.options, function(code, signal) {
-        console.log('done', code, signal);
-        console.log('pdf_base64:', memStream.read().toString('base64'));
-    }).pipe(memStream);
+    
+    try {
+        wkhtmltopdf(html_utf8, event.options, function(code, signal) {
+            console.log('done', code, signal);
+            const pdf_base64 = memStream.read().toString('base64');
+            console.log('pdf_base64:', pdf_base64);
+            resolve(pdf_base64);
+        }).pipe(memStream);
+        
+    } catch (e) {
+        reject(e);        
+    }
+});
 
-
+exports.handler = async (event) => {
+    
+    const pdfString = await createPdf;
+    const response = {
+        statusCode: 200,
+        body: pdfString,
+    };
+    return response;
+};
 
 // exports.handler = async (event, context) => {
 //     const html = '<h1>Test</h1>'
